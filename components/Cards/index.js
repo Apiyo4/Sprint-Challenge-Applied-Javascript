@@ -39,7 +39,7 @@ function createArticleCards(info){
 
     headline.textContent= info.headline;
     img.src = info['authorPhoto'];
-    authorName.textContent= info.authorName;
+    authorName.textContent= `By: ${info.authorName}`;
     return card;
 }
 
@@ -47,14 +47,14 @@ function createArticleCards(info){
 
 axios.get('https://lambda-times-backend.herokuapp.com/articles')
     .then(response=>{
-        console.log(response.data);
+        // console.log(response.data);
        const topicObj = response.data.articles;
 
        for(let article in topicObj){
            let arrayArticles = topicObj[article];
-           console.log(arrayArticles);
+        //    console.log(arrayArticles);
            arrayArticles.forEach(arrayArticle=>{
-               console.log(arrayArticle);
+            //    console.log(arrayArticle);
                const cardContainer = document.querySelector('.cards-container');
                const info = createArticleCards(arrayArticle);
                cardContainer.append(info);
