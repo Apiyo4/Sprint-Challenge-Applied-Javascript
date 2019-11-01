@@ -17,3 +17,56 @@
     <div class="right-button"> > </div>
   </div>
 */
+function createCarousel(){
+  const carousel = document.createElement('div');
+  const leftButton = document.createElement('div');
+  const mountains = document.createElement('img');
+  const computer = document.createElement('img');
+  const trees = document.createElement('img');
+  const turntable = document.createElement('img');
+  const rightButton = document.createElement('div');
+
+
+  carousel.append(leftButton);
+  carousel.append(mountains);
+  carousel.append( computer);
+  carousel.append( trees);
+  carousel.append(turntable);
+  carousel.append(rightButton );
+
+  carousel.classList.add('carousel');
+  leftButton.classList.add('leftButton');
+  rightButton.classList.add('rightButton');
+
+  leftButton.textContent = '<' ;
+  rightButton.textContent = '>';
+  mountains.src= "./assets/carousel/mountains.jpeg";
+  computer.src = "./assets/carousel/computer.jpeg";
+  trees.src = "./assets/carousel/trees.jpeg";
+  turntable.src ="./assets/carousel/turntable.jpeg"; 
+
+ const images = document.querySelectorAll('img');
+console.log(images);
+  
+  leftButton.addEventListener('click', event=>{
+    console.log("hello");
+  })
+  rightButton.addEventListener('click', event=>{
+    console.log("hello");
+  })
+
+
+
+
+
+
+  return carousel; 
+}
+const carouselContainer = document.querySelector('.carousel-container');
+carouselContainer.append(createCarousel());
+console.log(createCarousel());
+
+
+
+
+  
