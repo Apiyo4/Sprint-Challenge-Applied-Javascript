@@ -45,8 +45,21 @@ function createCarousel(){
   trees.src = "./assets/carousel/trees.jpeg";
   turntable.src ="./assets/carousel/turntable.jpeg"; 
 
+  leftButton.addEventListener('click', event=>{
+    console.log("hello");
+  })
+  rightButton.addEventListener('click', event=>{
+    console.log("hello");
+  })
+
   return carousel;
 }
 const carouselContainer = document.querySelector('.carousel-container');
 carouselContainer.append(createCarousel());
 console.log(createCarousel());
+const images = document.querySelectorAll('img');
+console.log(images);
+
+
+
+
